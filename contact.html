@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Print For Good Films Inc.</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-intro {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.6;
+      margin-bottom: 48px;
+    }
+
+    .contact-form {
+      max-width: 540px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--black);
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--black);
+    }
+
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .btn-submit {
+      display: inline-block;
+      padding: 14px 40px;
+      background: var(--black);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-submit:hover { background: #333; }
+
+    @media (max-width: 480px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="https://static.wixstatic.com/media/2bd764_b9571d1e271b485c886b7f010058d025~mv2.png" alt="Print For Good Films">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="films.html">Film Projects</a></li>
+      <li><a href="ai.html">AI Consulting</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-hero">
+      <h1>Let's Chat</h1>
+      <p>If you have any questions, please complete the form below.</p>
+    </div>
+
+    <div class="container">
+      <!-- ACTION: Replace YOUR_FORM_ID with your Formspree endpoint when ready -->
+      <!-- e.g. action="https://formspree.io/f/YOUR_FORM_ID" -->
+      <form class="contact-form" action="https://formspree.io/f/xpqykpgz" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 by Print For Good Films Inc.</p>
+  </footer>
+
+</body>
+</html>

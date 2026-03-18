@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Print For Good Films Inc.</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Home hero ─────────────────────────────────────────────── */
+    .home-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 48px;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .home-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+    }
+
+    .home-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 24px;
+    }
+
+    .home-title {
+      font-size: clamp(40px, 8vw, 80px);
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+
+    .home-title em {
+      font-style: normal;
+      color: #555;
+    }
+
+    .home-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.6;
+      margin-bottom: 48px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--black);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn:hover {
+      background: #333;
+      transform: translateY(-1px);
+    }
+
+    /* ── Portrait ──────────────────────────────────────────────── */
+    .home-portrait {
+      display: flex;
+      justify-content: center;
+      padding: 0 48px 80px;
+    }
+
+    .home-portrait img {
+      width: 140px;
+      height: 186px;
+      object-fit: cover;
+      filter: grayscale(20%);
+      border: 1px solid var(--border);
+    }
+
+    @media (max-width: 768px) {
+      .home-hero { padding: 60px 24px; min-height: 70vh; }
+      .home-portrait { padding: 0 24px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="https://static.wixstatic.com/media/2bd764_b9571d1e271b485c886b7f010058d025~mv2.png" alt="Print For Good Films">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="films.html">Film Projects</a></li>
+      <li><a href="ai.html">AI Consulting</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="home-hero">
+      <div class="home-hero-inner">
+        <div class="home-eyebrow">Print For Good Films Inc.</div>
+        <h1 class="home-title">Be Curious.<br><em>Be Honest.</em></h1>
+        <p class="home-sub">Real Stories, Lasting Impact, Global Vision</p>
+        <a class="btn" href="films.html">See Film Projects</a>
+      </div>
+    </section>
+
+    <div class="home-portrait">
+      <img
+        src="https://static.wixstatic.com/media/2bd764_1bad748f3f194848bb73dfb1d697d5e0~mv2.jpg"
+        alt="Paul Henry Laffin"
+      >
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 by Print For Good Films Inc.</p>
+  </footer>
+
+</body>
+</html>
