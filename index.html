@@ -8,7 +8,7 @@
   <style>
     /* ── Home hero ─────────────────────────────────────────────── */
     .home-hero {
-      min-height: 80vh;
+      min-height: 60vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -75,24 +75,24 @@
       transform: translateY(-1px);
     }
 
-    /* ── Portrait ──────────────────────────────────────────────── */
+    /* ── Full-width photo ───────────────────────────────────────── */
     .home-portrait {
-      display: flex;
-      justify-content: center;
-      padding: 0 48px 80px;
+      width: 100%;
+      padding: 0;
+      margin: 0;
     }
 
     .home-portrait img {
-      width: 320px;
-      height: 426px;
+      width: 100%;
+      height: 500px;
       object-fit: cover;
-      filter: grayscale(20%);
-      border: 1px solid var(--border);
+      object-position: center;
+      display: block;
     }
 
     @media (max-width: 768px) {
-      .home-hero { padding: 60px 24px; min-height: 70vh; }
-      .home-portrait { padding: 0 24px 60px; }
+      .home-hero { padding: 60px 24px; min-height: 60vh; }
+      .home-portrait img { height: 300px; }
     }
   </style>
 </head>
