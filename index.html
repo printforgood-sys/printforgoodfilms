@@ -6,93 +6,94 @@
   <title>Home | Print For Good Films Inc.</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* ── Home hero ─────────────────────────────────────────────── */
+    /* ── Two-column home hero ────────────────────────────────────── */
     .home-hero {
-      min-height: 60vh;
+      display: flex;
+      min-height: calc(100vh - 137px);
+    }
+
+    /* Left column — grey panel with text */
+    .home-hero-left {
+      flex: 1;
+      background: #f5f5f5;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 48px;
-      background: var(--white);
-      position: relative;
-      overflow: hidden;
+      padding: 60px 70px;
     }
 
-    .home-hero-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 760px;
-    }
-
-    .home-eyebrow {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #999;
-      margin-bottom: 24px;
+    .home-hero-content {
+      max-width: 500px;
     }
 
     .home-title {
-      font-size: clamp(40px, 8vw, 80px);
-      font-weight: 700;
-      color: var(--black);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 24px;
-    }
-
-    .home-title em {
-      font-style: normal;
-      color: #555;
+      font-size: 50px;
+      font-weight: 400;
+      color: #000000;
+      line-height: 1.2;
+      letter-spacing: 0;
+      margin-bottom: 28px;
+      font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
     }
 
     .home-sub {
-      font-size: clamp(16px, 2vw, 20px);
-      font-weight: 300;
-      color: var(--ink);
-      line-height: 1.6;
-      margin-bottom: 48px;
+      font-size: 30px;
+      font-weight: 400;
+      color: #000000;
+      line-height: 1.4;
+      margin-bottom: 40px;
+      font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 32px;
-      background: var(--black);
-      color: var(--white);
-      font-family: inherit;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: background 0.2s, transform 0.15s;
+    .home-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 18px;
+      font-weight: 400;
+      color: #000000;
+      text-decoration: underline;
+      font-family: 'Space Grotesk', sans-serif;
+      text-underline-offset: 3px;
     }
 
-    .btn:hover {
-      background: #333;
-      transform: translateY(-1px);
+    .home-link:hover { color: #444; }
+
+    .home-link svg {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
     }
 
-    /* ── Full-width photo ───────────────────────────────────────── */
-    .home-portrait {
+    /* Right column — beach photo */
+    .home-hero-right {
+      flex: 1;
+      overflow: hidden;
+      min-height: 600px;
+    }
+
+    .home-hero-right img {
       width: 100%;
-      padding: 0;
-      margin: 0;
-    }
-
-    .home-portrait img {
-      width: 100%;
-      height: 500px;
+      height: 100%;
       object-fit: cover;
-      object-position: top;
+      object-position: center;
       display: block;
     }
 
+    /* Mobile: stack vertically */
     @media (max-width: 768px) {
-      .home-hero { padding: 60px 24px; min-height: 60vh; }
-      .home-portrait img { height: 300px; }
+      .home-hero {
+        flex-direction: column;
+        min-height: auto;
+      }
+      .home-hero-left {
+        padding: 48px 28px;
+      }
+      .home-title { font-size: 36px; }
+      .home-sub { font-size: 22px; }
+      .home-hero-right {
+        height: 320px;
+        min-height: 320px;
+      }
     }
   </style>
 </head>
@@ -113,20 +114,32 @@
 
   <main>
     <section class="home-hero">
-      <div class="home-hero-inner">
-        <div class="home-eyebrow">Print For Good Films Inc.</div>
-        <h1 class="home-title">Be Curious.<br><em>Be Honest.</em></h1>
-        <p class="home-sub">Real Stories, Lasting Impact, Global Vision</p>
-        <a class="btn" href="films.html">See Film Projects</a>
-      </div>
-    </section>
 
-    <div class="home-portrait">
-      <img
-        src="https://static.wixstatic.com/media/2bd764_1bad748f3f194848bb73dfb1d697d5e0~mv2.jpg"
-        alt="Paul Henry Laffin"
-      >
-    </div>
+      <!-- Left: grey text panel -->
+      <div class="home-hero-left">
+        <div class="home-hero-content">
+          <h1 class="home-title">Be Curious. Be Honest.</h1>
+          <p class="home-sub">Real Stories, Lasting Impact, Global Vision</p>
+          <a class="home-link" href="films.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="15" height="10" rx="1"/>
+              <path d="M17 9l5-2v10l-5-2"/>
+            </svg>
+            Click here for details on film projects
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: beach photo panel -->
+      <div class="home-hero-right">
+        <img
+          src="https://static.wixstatic.com/media/2bd764_1bad748f3f194848bb73dfb1d697d5e0~mv2.jpg"
+          alt="Beach at sunset with light posts and trees"
+        >
+      </div>
+
+    </section>
   </main>
 
   <footer>
