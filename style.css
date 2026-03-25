@@ -43,8 +43,10 @@ nav {
 }
 
 .nav-logo img {
+  width: 253px;
   height: 126px;
-  width: auto;
+  object-fit: contain;
+  object-position: left center;
   display: block;
 }
 
