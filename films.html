@@ -80,6 +80,11 @@
     <a class="nav-logo" href="index.html">
       <img src="images/logo.png" alt="Print For Good Films">
     </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="films.html" class="active">Film Projects</a></li>
@@ -134,5 +139,18 @@
     <p>© 2026 by Print For Good Films Inc.</p>
   </footer>
 
+
+  <script>
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('nav');
+    toggle.addEventListener('click', function() {
+      nav.classList.toggle('nav-open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        nav.classList.remove('nav-open');
+      });
+    });
+  </script>
 </body>
 </html>
