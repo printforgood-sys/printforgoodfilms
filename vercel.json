@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/ai", "destination": "/ai.html", "permanent": true }
+  ]
+}
