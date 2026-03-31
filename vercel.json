@@ -1,5 +1,5 @@
 {
-  "redirects": [
-    { "source": "/ai", "destination": "/ai.html", "permanent": true }
+  "rewrites": [
+    { "source": "/ai", "destination": "/ai.html" }
   ]
 }
