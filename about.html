@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Print For Good Films Inc.</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-lead {
+      font-size: clamp(18px, 2.5vw, 22px);
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.7;
+      max-width: 680px;
+      margin-bottom: 56px;
+    }
+
+    .about-section {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-section:last-child {
+      border-bottom: none;
+    }
+
+    .about-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .about-text {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.75;
+      max-width: 680px;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="favicon-512x512.png">
+  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RDZMY907J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9RDZMY907J');
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="images/logo.png" alt="Print For Good Films">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="films.html">Film Projects</a></li>
+      <li><a href="ai.html">AI Labs</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-hero">
+      <h1>About</h1>
+    </div>
+
+    <div class="container">
+      <p class="about-lead">Founded by Paul Henry Laffin, Print For Good Films creates authentic, cross-cultural short documentaries that inspire social and environmental change worldwide. Based in Toronto, we are dedicated to powerful, impactful storytelling.</p>
+
+      <div class="about-section">
+        <div class="about-label">Mission</div>
+        <p class="about-text">To deliver authentic, cross-cultural narratives that not only captivate global audiences but also foster meaningful cultural exchange and inspire positive social change.</p>
+      </div>
+
+      <div class="about-section">
+        <div class="about-label">Vision</div>
+        <p class="about-text">To be a global leader in short documentary filmmaking, creating impactful, award-winning films that inspire audiences worldwide. We aim to deepen cultural collaboration, support emerging storytellers, and champion environmental conservation through innovative film and digital platforms.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 by Print For Good Films Inc.</p>
+  </footer>
+
+
+  <script>
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('nav');
+    toggle.addEventListener('click', function() {
+      nav.classList.toggle('nav-open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        nav.classList.remove('nav-open');
+      });
+    });
+  </script>
+</body>
+</html>

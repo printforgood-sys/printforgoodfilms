@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Print For Good Films Inc.</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Two-column home hero ────────────────────────────────────── */
+    .home-hero {
+      display: flex;
+      min-height: calc(100vh - 137px);
+    }
+
+    /* Left column — grey panel with text */
+    .home-hero-left {
+      flex: 1;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      padding: 60px 70px;
+    }
+
+    .home-hero-content {
+      max-width: 500px;
+    }
+
+    .home-title {
+      font-size: 50px;
+      font-weight: 400;
+      color: #000000;
+      line-height: 1.2;
+      letter-spacing: 0;
+      margin-bottom: 28px;
+      font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
+    }
+
+    .home-sub {
+      font-size: 30px;
+      font-weight: 400;
+      color: #000000;
+      line-height: 1.4;
+      margin-bottom: 40px;
+      font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
+    }
+
+    .home-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 18px;
+      font-weight: 400;
+      color: #000000;
+      text-decoration: underline;
+      font-family: 'Space Grotesk', sans-serif;
+      text-underline-offset: 3px;
+    }
+
+    .home-link:hover { color: #444; }
+
+    .home-link svg {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+    }
+
+    /* Right column — beach photo */
+    .home-hero-right {
+      flex: 1;
+      overflow: hidden;
+      min-height: 600px;
+    }
+
+    .home-hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* Mobile: stack vertically */
+    @media (max-width: 768px) {
+      .home-hero {
+        flex-direction: column;
+        min-height: auto;
+      }
+      .home-hero-left {
+        padding: 48px 28px;
+      }
+      .home-title { font-size: 36px; }
+      .home-sub { font-size: 22px; }
+      .home-hero-right {
+        height: 320px;
+        min-height: 320px;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="favicon-512x512.png">
+  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RDZMY907J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9RDZMY907J');
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="images/logo.png" alt="Print For Good Films">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="films.html">Film Projects</a></li>
+      <li><a href="ai.html">AI Labs</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="home-hero">
+
+      <!-- Left: grey text panel -->
+      <div class="home-hero-left">
+        <div class="home-hero-content">
+          <h1 class="home-title">Be Curious. Be Honest.</h1>
+          <p class="home-sub">Real Stories, Lasting Impact, Global Vision</p>
+          <a class="home-link" href="films.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="15" height="10" rx="1"/>
+              <path d="M17 9l5-2v10l-5-2"/>
+            </svg>
+            Click here for details on film projects
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: beach photo panel -->
+      <div class="home-hero-right">
+        <img
+          src="images/beach.jpg"
+          alt="Beach at sunset with light posts and trees"
+        >
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 by Print For Good Films Inc.</p>
+  </footer>
+
+
+  <script>
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('nav');
+    toggle.addEventListener('click', function() {
+      nav.classList.toggle('nav-open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        nav.classList.remove('nav-open');
+      });
+    });
+  </script>
+</body>
+</html>
