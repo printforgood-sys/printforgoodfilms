@@ -1,0 +1,8 @@
+{
+  "name": "printforgoodfilms",
+  "version": "1.0.0",
+  "description": "Print For Good Films website",
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  }
+}
