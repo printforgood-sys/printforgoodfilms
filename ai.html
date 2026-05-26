@@ -467,6 +467,10 @@
             <label for="website">Business website address <span style="font-weight:400;font-size:9pt;">(optional)</span></label>
             <input type="text" id="website" name="website" placeholder="www.example.com or 'No website yet'">
           </div>
+          <div class="cp-form-group">
+            <label for="goal">What is your most important goal for your business?</label>
+            <textarea id="goal" name="goal" style="font-family:'Space Grotesk',Arial,sans-serif;font-size:11pt;font-weight:300;color:var(--body);background:var(--white);border:1px solid var(--rule);padding:10px 14px;outline:none;transition:border-color 0.2s;min-height:100px;resize:vertical;" placeholder="Tell us what matters most..."></textarea>
+          </div>
           <button type="submit" class="cp-form-submit" id="submitBtn">Reserve my spot</button>
           <p class="cp-form-note">We don't spam. We'll reach out once we have a spot for you.</p>
           <div id="formMessage" style="display:none;margin-top:16px;padding:12px;border-radius:4px;font-size:11pt;"></div>
@@ -511,6 +515,7 @@
       var email = document.getElementById('email').value;
       var business = document.getElementById('business').value;
       var website = document.getElementById('website').value || '';
+      var goal = document.getElementById('goal').value || '';
 
       submitBtn.disabled = true;
       submitBtn.textContent = 'Submitting...';
@@ -527,6 +532,7 @@
             email: email,
             business: business,
             website: website,
+            goal: goal,
           }),
         });
 

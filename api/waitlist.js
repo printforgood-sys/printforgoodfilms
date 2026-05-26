@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, email, business, website } = req.body;
+  const { name, email, business, website, goal } = req.body;
 
   // Validate required fields
   if (!name || !email || !business) {
@@ -34,6 +34,8 @@ export default async function handler(req, res) {
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
         <p><strong>Business Name:</strong> ${escapeHtml(business)}</p>
         <p><strong>Website:</strong> ${website ? escapeHtml(website) : 'Not provided'}</p>
+        <p><strong>Most Important Goal:</strong></p>
+        <p>${goal ? escapeHtml(goal).replace(/\n/g, '<br>') : 'Not provided'}</p>
         <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
       `,
     };
