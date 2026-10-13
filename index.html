@@ -95,6 +95,57 @@
         min-height: 320px;
       }
     }
+    /* ── Other ventures strip ────────────────────────────────────── */
+    .ventures {
+      border-top: 1px solid var(--border);
+      background: var(--white);
+      padding: 40px 48px;
+    }
+    .ventures-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .ventures-label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 8px;
+    }
+    .ventures-name {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+    .ventures-desc {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+      color: var(--ink);
+      max-width: 560px;
+    }
+    .ventures-link {
+      flex-shrink: 0;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--black);
+      text-decoration: none;
+      border: 1px solid var(--black);
+      padding: 12px 22px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .ventures-link:hover { background: var(--black); color: var(--white); }
+    @media (max-width: 768px) {
+      .ventures { padding: 32px 24px; }
+      .ventures-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .ventures-name { font-size: 20px; }
+    }
   </style>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -160,6 +211,18 @@
 
     </section>
   </main>
+
+  <!-- Other ventures -->
+  <section class="ventures" aria-label="Other ventures by Paul Laffin">
+    <div class="ventures-inner">
+      <div>
+        <p class="ventures-label">Also by Paul Laffin</p>
+        <p class="ventures-name">Fields From Orbit</p>
+        <p class="ventures-desc">Satellite photography for your wall. Real places on Earth, seen from space, available as prints and digital downloads.</p>
+      </div>
+      <a class="ventures-link" href="https://fieldsfromorbit.com" target="_blank" rel="noopener">Visit fieldsfromorbit.com &rarr;</a>
+    </div>
+  </section>
 
   <footer>
     <p>© 2026 by Print For Good Films Inc.</p>
